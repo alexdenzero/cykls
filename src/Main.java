@@ -40,14 +40,16 @@ public class Main {
 
     public static void task3 () {
         System.out.println("Задача 3");
-        int naselenie = 12_000_000;
-        int rohdaemostNa1000 = 12_000 * 17;
-        int smertnostNa1000 = 12_000 * 8;
-        int totalPipl = rohdaemostNa1000 - smertnostNa1000;
-        int sTotalPiil = totalPipl + naselenie;
-        for (int i = 1; i <= 10 ; i++) {
-            sTotalPiil = sTotalPiil + totalPipl;
-            System.out.println("Год " + i + " , численность населения составляет " +sTotalPiil);
+        double naselenie = 12_000_000;
+        ///int naselenieNa1000 = naselenie / 1000;
+        ///int rohdaemostNa1000 = naselenieNa1000 * 17;
+        ///int smertnostNa1000 = naselenieNa1000 * 8;
+        ////int totalPipl = rohdaemostNa1000 - smertnostNa1000;
+        //// =      naselenie * 0.09;
+        int i = 1;
+        for (;i <= 10; i++) {
+            naselenie = (naselenie * 0.09) + naselenie;
+            System.out.println("Год " + i + " , численность населения составляет " +naselenie);
         }
     }
 
@@ -97,10 +99,9 @@ public class Main {
 
     public static void task7 () {
         System.out.println("Задача 7");
-        int patnica = 5;
-        for (; patnica <= 31; patnica++) {
-            patnica = patnica + 7;
-            System.out.println("Сегодня пятница " + patnica + "е - число. Необходимо подготовить отчет.");
+        int den = 5;
+        for (; den <= 31; den = den + 7) {
+            System.out.println("Сегодня пятница " + den + "е - число. Необходимо подготовить отчет.");
         }
     }
 
