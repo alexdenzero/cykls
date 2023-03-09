@@ -15,10 +15,10 @@ public class Main {
         System.out.println("Задача 1");
         int sallary = 29_000;
         int total = 0;
-        int vklad = sallary - 14_000;
+        int contribution = sallary - 14_000;
         int i = 1;
         for (; total < 2_459_000; i++) {
-            total = vklad + total;
+            total = contribution + total;
             System.out.println("Месяц " + i + " , сумма накоплений равна " + total + " рублей.");
         }
     }
@@ -40,18 +40,18 @@ public class Main {
 
     public static void task3 () {
         System.out.println("Задача 3");
-        int naselenie = 12_000_000;
+        int population = 12_000_000;
         double fertility = 17f / 1000;
         double mortality = 8f / 1000;
-        ///int naselenieNa1000 = naselenie / 1000;
-        ///int rohdaemostNa1000 = naselenieNa1000 * 17;
-        ///int smertnostNa1000 = naselenieNa1000 * 8;
-        ////int totalPipl = rohdaemostNa1000 - smertnostNa1000;
-        //// =      naselenie * 0.009;
+        ///int populationNa1000 = population / 1000;
+        ///int fertilityNa1000 = populationNa1000 * 17;
+        ///int mortalityNa1000 = populationNa1000 * 8;
+        ////int totalpopulation = fertilityNa1000 - mortalityNa1000;
+        //// =      population * 0.009;
         int i = 1;
         for (;i <= 10; i++) {
-            naselenie =(int) (naselenie * (fertility - mortality)) + naselenie;
-            System.out.println("Год " + i + " , численность населения составляет " +naselenie);
+            population =(int) (population * (fertility - mortality)) + population;
+            System.out.println("Год " + i + " , численность населения составляет " +population);
         }
     }
 
@@ -101,9 +101,9 @@ public class Main {
 
     public static void task7 () {
         System.out.println("Задача 7");
-        int den = 5;
-        for (; den <= 31; den = den + 7) {
-            System.out.println("Сегодня пятница " + den + "е - число. Необходимо подготовить отчет.");
+        int day = 5;
+        for (; day <= 31; day = day + 7) {
+            System.out.println("Сегодня пятница " + day + "е - число. Необходимо подготовить отчет.");
         }
     }
 
@@ -111,10 +111,10 @@ public class Main {
     public static void task8 () {
         System.out.println("Задача 8");
         int year = 0;
-        int za200Let = 2023 - 200;
-        int posle200Let = 2023 + 100;
-        for (; year <= 2123; year = year + 79) {
-            if (year >= za200Let) {
+        int for200Years = 2023 - 200;
+        int after100Years= 2023 + 100;
+        for (; year <= after100Years; year = year + 79) {
+            if (year >= for200Years) {
                 System.out.println(year);
             }
         }
