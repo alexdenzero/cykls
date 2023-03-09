@@ -40,15 +40,17 @@ public class Main {
 
     public static void task3 () {
         System.out.println("Задача 3");
-        double naselenie = 12_000_000;
+        int naselenie = 12_000_000;
+        double fertility = 17f / 1000;
+        double mortality = 8f / 1000;
         ///int naselenieNa1000 = naselenie / 1000;
         ///int rohdaemostNa1000 = naselenieNa1000 * 17;
         ///int smertnostNa1000 = naselenieNa1000 * 8;
         ////int totalPipl = rohdaemostNa1000 - smertnostNa1000;
-        //// =      naselenie * 0.09;
+        //// =      naselenie * 0.009;
         int i = 1;
         for (;i <= 10; i++) {
-            naselenie = (naselenie * 0.09) + naselenie;
+            naselenie =(int) (naselenie * (fertility - mortality)) + naselenie;
             System.out.println("Год " + i + " , численность населения составляет " +naselenie);
         }
     }
